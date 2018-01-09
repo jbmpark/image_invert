@@ -11,9 +11,11 @@ Download vgg19 pre-trained :  http://www.vlfeat.org/matconvnet/models/beta16/ima
 vgg.py is borrowed from 'https://github.com/anishathalye/neural-style'
 
 
-
-![입력](./input_saved.jpg) 
+< Input Image > 
+![입력](./input_saved.png) 
+< L2 Loss only >
 ![L2 loss only](./l2_loss_only_10000step.png) 
+< L2 and TV loss >
 ![L2 + TV loss](./l2_tv_loss_only_10000step.png) 
 
 
