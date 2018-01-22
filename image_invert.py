@@ -83,7 +83,8 @@ def main(_):
     X_invert_feature = invert_net[invert_layer]
     
     l2_loss = tf.norm(X_content_feature-X_invert_feature, 'euclidean')/tf.norm(X_content_feature, 'euclidean')
-    total_variation_loss = tf.image.total_variation(img+X)[0]
+    #total_variation_loss = tf.image.total_variation(img+X)[0]
+    total_variation_loss = tf.reduce_sum(tf.image.total_variation(tf.convert_to_tensor(img+X)))
     sigma_tv = 5e-7
     loss = l2_loss + sigma_tv*total_variation_loss
 
